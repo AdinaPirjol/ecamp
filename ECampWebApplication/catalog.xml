@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:31108/TestWebService/TestWebService?wsdl" uri="src/conf/xml-resources/web-service-references/TestWebService/wsdl/localhost_31108/TestWebService/TestWebService.wsdl"/>
+    <system systemId="http://localhost:31108/TestWebService/TestWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/TestWebService/wsdl/localhost_31108/TestWebService/TestWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:31108/TestWebService2/TestWebService2?wsdl" uri="src/conf/xml-resources/web-service-references/TestWebService2/wsdl/localhost_31108/TestWebService2/TestWebService2.wsdl"/>
+    <system systemId="http://localhost:31108/TestWebService2/TestWebService2?xsd=1" uri="src/conf/xml-resources/web-service-references/TestWebService2/wsdl/localhost_31108/TestWebService2/TestWebService2.xsd_1.xsd"/>
+    <system systemId="http://localhost:31108/CampWebService/CampWebService?wsdl" uri="src/conf/xml-resources/web-service-references/CampWebService/wsdl/localhost_31108/CampWebService/CampWebService.wsdl"/>
+    <system systemId="http://localhost:31108/CampWebService/CampWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/CampWebService/wsdl/localhost_31108/CampWebService/CampWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:31108/CustomerWebService/CustomerWebService?wsdl" uri="src/conf/xml-resources/web-service-references/CustomerWebService/wsdl/localhost_31108/CustomerWebService/CustomerWebService.wsdl"/>
+    <system systemId="http://localhost:31108/CustomerWebService/CustomerWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/CustomerWebService/wsdl/localhost_31108/CustomerWebService/CustomerWebService.xsd_1.xsd"/>
+</catalog>

@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws/">
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="addCustomer" type="tns:addCustomer"/>
+
+<xs:element name="addCustomerResponse" type="tns:addCustomerResponse"/>
+
+<xs:element name="findCustomer" type="tns:findCustomer"/>
+
+<xs:element name="findCustomerResponse" type="tns:findCustomerResponse"/>
+
+<xs:element name="getBookingHistory" type="tns:getBookingHistory"/>
+
+<xs:element name="getBookingHistoryResponse" type="tns:getBookingHistoryResponse"/>
+
+<xs:element name="sendEmails" type="tns:sendEmails"/>
+
+<xs:element name="sendEmailsResponse" type="tns:sendEmailsResponse"/>
+
+<xs:complexType name="sendEmails">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="sendEmailsResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getBookingHistory">
+<xs:sequence>
+<xs:element name="arg0" type="tns:customer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="customer">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getBookingHistoryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:booking" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="booking">
+<xs:sequence>
+<xs:element name="campOffer" type="tns:campOffer" minOccurs="0"/>
+<xs:element name="childrenNumber" type="xs:int"/>
+<xs:element name="customer" type="tns:customer" minOccurs="0"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="participants" type="tns:participant" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="totalPrice" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="campOffer">
+<xs:sequence>
+<xs:element name="camp" type="tns:camp" minOccurs="0"/>
+<xs:element name="dailyProgram" type="tns:dailyProgram" minOccurs="0"/>
+<xs:element name="dailyPrograms" type="tns:dailyProgram" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="optionalTrips" type="tns:optionalTrip" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="remainingSeats" type="xs:int"/>
+<xs:element name="startDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="totalSeats" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="camp">
+<xs:sequence>
+<xs:element name="campName" type="xs:string" minOccurs="0"/>
+<xs:element name="campType" type="tns:campType" minOccurs="0"/>
+<xs:element name="daysPeriod" type="xs:int"/>
+<xs:element name="extraEquipment" type="xs:double"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="location" type="xs:string" minOccurs="0"/>
+<xs:element name="price" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dailyProgram">
+<xs:sequence>
+<xs:element name="activities" type="tns:activity" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="noOfInstructors" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="activity">
+<xs:sequence>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="optionalTrip">
+<xs:sequence>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="price" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="participant">
+<xs:sequence>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCustomer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCustomerResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findCustomer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="campType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="SUMMER"/>
+<xs:enumeration value="WINTER"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>
